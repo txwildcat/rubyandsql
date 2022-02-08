@@ -27,9 +27,19 @@ Salesperson.destroy_all
 # 5. insert new rows in the table
 
 salesperson = Salesperson.new
+
 salesperson.first_name = "Brian"
 salesperson.last_name = "Eng"
 salesperson.email = "brian@tacos.com"
+
+salesperson.save
+
+salesperson = Salesperson.new
+
+salesperson.first_name = "Ben"
+salesperson.last_name = "Block"
+salesperson.email = "bjblock@tacos.com"
+
 salesperson.save
 
 puts Salesperson.all.count
